@@ -18,7 +18,7 @@ function Home() {
 
   const[personagens,setPersonagens] = useState([])
 
-  const getPost = async() => {
+  const getCharacter = async() => {
     try {
       const response = await RpgUrl.get('/personagem')
       const data = response.data;
@@ -31,7 +31,7 @@ function Home() {
     }
   }
   useEffect(() => {
-    getPost();
+    getCharacter();
   },[])
 
   return (

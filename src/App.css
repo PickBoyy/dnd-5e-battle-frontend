@@ -1,5 +1,138 @@
-.container{
-    max-width:1000px ;
-    margin: 2rem auto;
-    padding: 0 2rem;
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*=====================================================Import Fonts=========================================================*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*=====================================================Grid============================================================*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 850px;
+}
+.left {
+    background-color: #181d27;
+    text-align: center;
+}
+.center{
+    background-color: #181d27b7;
+    text-align: center;
+    width: 1100px;
+}
+.rigth{
+    background-color: #181d27;
+    text-align: center;
+}
+.select {
+    margin-top: 150px;
+}
+.select > h2 {
+    font-family: "Pirata One",Arial, Helvetica, sans-serif;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*=====================================================Tabuleiro============================================================*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+#tabuleiro{
+    background-image: url(cenario.jfif);
+    border: 3px solid #0d0f13;
+    border-radius: 3px;
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    display: grid;
+    padding: 15px;
+    gap: 5px;
+    margin-top: 50px;
+    grid-template-areas:
+    'A1 A2 A3'
+    'B1 B2 B3'
+    'C1 C2 C3'
+    ;
+}
+
+.casa{
+    background-color: rgba(204, 204, 204, 0.525);
+    border-radius: 3px;
+    border: 2px solid #CCC;
+    
+    
+}
+
+#A1 {
+    grid-area: "A1";
+    text-align: center;
+}
+
+#A2 {
+    grid-area: "A2"; 
+    text-align: center;
+}
+
+#A3 {
+    grid-area: "A3";
+    text-align: center;
+}
+
+#B1 {
+    grid-area: "B1";
+    text-align: center;
+}
+
+#B2 {
+    grid-area: "B2";
+    text-align: center;
+}
+
+#B3 {
+    grid-area: "B3";
+    text-align: center;
+}
+
+#C1 {
+    grid-area: "C1";
+    text-align: center;
+}
+
+#C2 {
+    grid-area: "C2";
+    text-align: center;
+}
+
+#C3 {
+    grid-area: "C3";
+    text-align: center;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*=====================================================Buttons============================================================*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+.btn_battle {
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    border: 3px solid #0d0f13;
+    font-size: 40px;
+    font-family: "Pirata One",Arial, Helvetica, sans-serif;
+}
+.create_character{
+    border: 2px solid #52565f;
+    font-size: 20px;
+}
+.dropdown-toggle {
+    width: 100px;
+    height: 40px;
+    background-color: #181d27;
+    border: 2px solid #0d0f13;
+    padding: 0px 5px 4px 5px;
+    font-size: 20px;
+    font-family: "Pirata One",Arial, Helvetica, sans-serif;
+}
+.show {
+    background-color: #373232c6;
+    color: white;
+}
+.dropdown-item {
+    color: white;
+    
 }

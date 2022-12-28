@@ -1,20 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from 'reactstrap'
+import Create from './modal'
 
 function Navbar() {
   return (
     <nav className='navbar'>
-        <h2>
-            <Link to={`/`}>RPG</Link>
-        </h2>
+        <h2>D&D 5e Battle</h2>
         <ul>
             <li>
-                <Link to={'/'}></Link>
-            </li>
-            <li>
-                <Link to={'/new'} className="new_btn">
-                    Criar Personagem
-                </Link>
+               <Create className={"create_character"}/>
             </li>
         </ul>
     </nav>
