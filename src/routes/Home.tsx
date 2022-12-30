@@ -1,20 +1,16 @@
 import axios from 'axios'
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect, Fragment} from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 import RpgUrl from '../Axios/config'
+import ICharacter from '../models/ICharacter'
 
-type personagem = {
-  id:number,
-  nome:string,
-  raca:string,
-  classe:string,
-  nivel: number,
+type MyProps = {
+
 }
 
 
-
-function Home() {
+function Home(props:MyProps) {
 
   const[personagens,setPersonagens] = useState([])
 
@@ -35,23 +31,17 @@ function Home() {
   },[])
 
   return (
-    <div>
-      <h1>Lista de Personagens!</h1>
+    <Fragment>
       {personagens.length === 0 ? (<p>Carregando...</p>) :(
-      personagens.map((personagem:personagem) => (
-        <div className='personagem' key={personagem.id}>
-          <hr />
+      personagens.map((personagem:ICharacter) => (
+        <Fragment  key={personagem.id}>
           <Link to={`/personagem/${personagem.nome}`}>
-            <h2>{personagem.nome}</h2>
+            <p>{personagem.nome}</p>
           </Link>
-          <p>{personagem.raca}</p>
-          <p>{personagem.classe}</p>
-          <p>{personagem.nivel}</p>
-          <hr />
-        </div>
+        </Fragment>
       ))
       )}
-    </div>
+    </Fragment>
   )
 }
 

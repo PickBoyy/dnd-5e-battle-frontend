@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Pirata+One&display=swap');
+
+
+.modal-content {
+    background-color: #0d0e0e31;
+    text-align: center;
+    
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.702);
+}
+.modal-header{
+    text-align: center;
+}
+.footerModal{
+    margin: auto;
+}
+h5.modal-title{
+   font-family: "Pirata One",Arial, Helvetica, sans-serif;
+   font-size: 40px;
+   margin-left: 20%;
+   text-shadow: 7px 10px 10px rgba(0, 0, 0, 0.714);
+}
+.popup{
+    background-color: rgba(32, 28, 46, 0.932);
+    width: 450px;
+    border-radius: 10px;
+    margin-top: 60px;
+    text-align: center;
+    border: 2px solid rgb(20, 19, 19);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.371);
+}
+.btn-close{
+    width: 15px;
+}
+.btn-close:active{
+    border: none;
+}
+
+.createDown {
+    margin-right: 22px;
+    margin-left: 22px;
+    margin-bottom: 15px;
+}
+.btnSubmit {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(20, 19, 19);
+    width: 200px;
+    height: 60px;
+    font-family: 'Pirata One',Arial, Helvetica, sans-serif;
+    color: rgba(189, 185, 185, 0.848);
+    font-size: 25px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btnSubmit:hover {
+    font-size: 30px;
+    background-color: rgb(17, 15, 30);
+    border: 2px solid rgb(115, 114, 119);
+    width: 200px;
+    height: 60px;
+    transition: 0.2s;
+    
+}

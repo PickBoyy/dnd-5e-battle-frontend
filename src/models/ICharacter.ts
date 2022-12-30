@@ -1,4 +1,5 @@
 export default interface ICharacter {
+    id:number;
     nomeDoJogador:string;
     nome:string;
     raca:string;

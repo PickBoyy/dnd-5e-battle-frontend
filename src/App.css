@@ -14,22 +14,30 @@
 .left {
     background-color: #181d27;
     text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.584);
 }
 .center{
     background-color: #181d27b7;
     text-align: center;
-    width: 1100px;
+    width: 1050px;
 }
 .rigth{
     background-color: #181d27;
     text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.584);
 }
 .select {
-    margin-top: 150px;
+    margin-top: 175px;
 }
 .select > h2 {
     font-family: "Pirata One",Arial, Helvetica, sans-serif;
 }
+hr{
+    color: black;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*=====================================================Tabuleiro============================================================*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
@@ -38,7 +46,7 @@
     border: 3px solid #0d0f13;
     border-radius: 3px;
     width: 1000px;
-    height: 800px;
+    height: 900px;
     margin: auto;
     display: grid;
     padding: 15px;
@@ -110,15 +118,34 @@
     width: 300px;
     height: 100px;
     margin-top: 20px;
-    margin-bottom: -20px;
+    margin-bottom: 0px;
     border: 3px solid #0d0f13;
     font-size: 40px;
     font-family: "Pirata One",Arial, Helvetica, sans-serif;
 }
-.create_character{
-    border: 2px solid #52565f;
-    font-size: 20px;
+
+.btn_battle:hover{
+    background-color: rgb(21, 20, 31);
+    border: 3px solid rgb(60, 60, 62);
+    font-size: 50px;
+    transition: 0.3s;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.563);
 }
+/*--------------------------------------------------------------------------------------------------------------------------*/
+.btn_create{
+    width: 200px;
+    height: 55px;
+    background-color: #181d27;
+    font-size: 20px;
+    border: 2px solid rgb(10, 10, 11);
+
+}
+.btn_create:hover{
+    background-color: rgb(21, 20, 31);
+    border: 2px solid rgb(103, 103, 103);
+    transition: 0.5s;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
 .dropdown-toggle {
     width: 100px;
     height: 40px;
@@ -128,11 +155,24 @@
     font-size: 20px;
     font-family: "Pirata One",Arial, Helvetica, sans-serif;
 }
-.show {
-    background-color: #373232c6;
-    color: white;
-}
-.dropdown-item {
-    color: white;
+.dropdown-toggle:hover {
+    background-color: rgb(21, 20, 31);
+    border: 2px solid rgb(60, 60, 62);
+    transition: 0.5s;
     
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+.dropdown-menu {
+    background-color: #3732326b;
+    color: white;
+    text-align: center;
+}
+.dropdown-menu:hover{
+    background-color: #313131
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+.dropdown-item:hover{
+    background-color: #181d27b7;
+    color: whitesmoke;
 }

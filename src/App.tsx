@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import './components/Navbar.css'
 import { Button } from 'reactstrap'
 import SelectCharacter from './components/buttons/SelectCharacter'
+import Home from './routes/Home'
 
 
 function App() {
@@ -13,13 +14,17 @@ function App() {
       <div className='grid'>
         <div className="left">
           <div className='select'>
+            <hr />
             <h2>Choose the Character</h2>
-                    <SelectCharacter/>
+                    <SelectCharacter className='btnSelect' text='Select' content={<Home/>}/>
+                    <hr />
+                    
           </div>
         </div>
         
         <div className="center">
         <Button color='dark'className='btn_battle'>Start Battle</Button>
+        
         <div id="tabuleiro">
             <div className="casa" id="A1"> <img src=""/> </div>
             <div className="casa" id="A2"> <img src=""/> </div>
@@ -35,8 +40,10 @@ function App() {
        
         <div className="rigth">
         <div className='select'>
+          <hr />
             <h2>Choose the Character</h2>
-                    <SelectCharacter/>
+                     <SelectCharacter className='btnSelect' text='Select' content={<Home/>}/>
+                    <hr />
           </div>
         </div>
       </div>

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+.createInp{
+    width: 245px;
+    height: 35px;
+    margin-bottom: 10px;
+    background-color: #191e26ad;
+    border: 2px solid #0d0f13;
+    border-radius: 3px;
+    padding: 0px 0px 0px 10px;
+    font-size: 18px;
+    font-family: 'Oswald',Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    
+}
+.IN{                             /*  inputs de numeros*/
+    width: 150px;
+    height: 35px;
+    margin-bottom: 10px;
+    background-color: #191e26ad;
+    border: 2px solid #0d0f13;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Oswald',Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 2px 2px 2px 2px;
+}
+
+.createInp:focus{
+    background-color: rgba(27, 21, 56, 0.216);
+    border: 2px solid rgb(15, 15, 17);
+    outline: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.338);
+}
+
+
+
+.IN:focus{
+    background-color: rgba(27, 21, 56, 0.216);
+    border: 2px solid rgb(15, 15, 17);
+    outline: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.338);
+}
+
+
+.label{
+    font-family:"Josefin Sans",Arial, Helvetica, sans-serif;
+    color: #e4dfdf;
+}

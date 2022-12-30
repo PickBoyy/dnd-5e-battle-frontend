@@ -3,9 +3,13 @@ import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reac
 import RpgUrl from '../../Axios/config';
 import ICharacter from '../../models/ICharacter';
 import "../../App.css"
+import Home from '../../routes/Home';
+
 
 type MyProps = {
-
+  content:any,
+  text:string,
+  className:string,
 }
 type MyState = {
 
@@ -23,17 +27,6 @@ class  SelectCharacter extends React.Component <MyProps, MyState>{
       DropdownMenu: [],
     };
   }
-   getCharacter = async() => {
-    try {
-      const response = await RpgUrl.get('/personagem')
-      const data = response.data;
-      console.log(data)
-      this.setState({DropdownMenu:data})
-
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   toggle() {
     this.setState({
@@ -45,15 +38,12 @@ class  SelectCharacter extends React.Component <MyProps, MyState>{
 
   render() {
     return (
-      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <ButtonDropdown className={this.props.className} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-          Select
+          {this.props.text}
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Pick</DropdownItem>
-          <DropdownItem>Niendol</DropdownItem>
-          <DropdownItem>Emy</DropdownItem>
-          <DropdownItem>LuizaAD</DropdownItem>
+         {this.props.content}
         </DropdownMenu>
       </ButtonDropdown>
     );
