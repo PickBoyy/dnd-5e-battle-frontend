@@ -7,6 +7,13 @@
     background-color: #131327bf;
     font-family: "Pirata One",Arial, Helvetica, sans-serif;
 }
+.MenuCreate{
+    background-color: rgba(20, 19, 29, 0.324);
+
+}
+.MenuCreate:hover{
+    background-color: rgba(0, 0, 0, 0);
+}
 
 .navbar > h2 {
     font-family: "bebas neue",Arial, Helvetica, sans-serif;

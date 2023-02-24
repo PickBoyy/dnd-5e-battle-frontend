@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import './style.css'
-import Input from '../input';
-import RaceBTN from '../buttons/RaceBTN';
-import ClassBTN from '../buttons/ClassBTN';
+import Input from '../../input'; 
+import RaceBTN from '../../buttons/RaceBTN';
+import ClassBTN from '../../buttons/ClassBTN';
 
 type MyProps = {
     className:string,
@@ -14,7 +13,7 @@ type MyState = {
 }
 
 
-class Create extends React.Component <MyProps,MyState > {
+class CreateMonster extends React.Component <MyProps,MyState > {
   constructor(props:MyProps) {
     super(props);
     this.state = {
@@ -33,7 +32,7 @@ class Create extends React.Component <MyProps,MyState > {
   render() {
     return (
       <div>
-        <Button className='btn_create' onClick={this.toggle}> Create your Character</Button>
+        <Button className='btn_create' onClick={this.toggle}> Create Monster</Button>
         <Modal isOpen={this.state.modal} fade={true} toggle={this.toggle} className='popup'>
           <ModalHeader toggle={this.toggle}>Choose Attributes</ModalHeader>
           <ModalBody>
@@ -106,4 +105,4 @@ class Create extends React.Component <MyProps,MyState > {
   }
 }
 
-export default Create;
+export default CreateMonster;

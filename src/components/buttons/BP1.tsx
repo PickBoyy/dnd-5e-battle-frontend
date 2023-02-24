@@ -1,30 +1,29 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import RpgUrl from '../../Axios/config';
 import ICharacter from '../../models/ICharacter';
 import "../../App.css"
-import Home from '../../routes/Home';
-
+import P1 from '../../API/API1';
 
 type MyProps = {
-  content:any,
   text:string,
   className:string,
+  
 }
 type MyState = {
-
-    DropdownMenu: Array<ICharacter>
     dropdownOpen: boolean;
+    value:string
+    character:Array <ICharacter>;
 }
 
-class  SelectCharacter extends React.Component <MyProps, MyState>{
+class  BP1 extends React.Component <MyProps, MyState>{
   constructor(props:MyProps) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false,
-      DropdownMenu: [],
+      value: ' ',
+      character:[]
     };
   }
 
@@ -33,8 +32,10 @@ class  SelectCharacter extends React.Component <MyProps, MyState>{
       dropdownOpen: !this.state.dropdownOpen,
     });
   }
-  
-  
+
+  selectingCharacter = (event:React.ChangeEvent<HTMLSelectElement>) => {
+    this.setState({value: event.target.value})
+  }  
 
   render() {
     return (
@@ -42,11 +43,11 @@ class  SelectCharacter extends React.Component <MyProps, MyState>{
         <DropdownToggle caret>
           {this.props.text}
         </DropdownToggle>
-        <DropdownMenu>
-         {this.props.content}
+        <DropdownMenu onChange={this.selectingCharacter} mutiple={true} >
+         <P1/>
         </DropdownMenu>
       </ButtonDropdown>
     );
   }
 }
-export default SelectCharacter
+export default BP1

@@ -1,0 +1,15 @@
+.dropdown-toggleBoard{
+    width: 200px;
+    height: 60px;
+
+}
+.dropdown-toggleBoard:hover{
+border: 2px solid rgba(0, 0, 0, 0.768);
+}
+.dropdown-toggleMenu{
+    width: 200px;
+    background-color: rgba(94, 83, 83, 0.354);
+}
+.dropdown-toggleMenu:hover{
+background-color: rgba(94, 84, 84, 0.551);
+}

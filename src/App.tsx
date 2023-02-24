@@ -1,13 +1,25 @@
 import './App.css'
-import { Outlet } from "react-router-dom"
-import Navbar from './components/Navbar'
-import './components/Navbar.css'
+import Navbar from './components/navbar/Navbar'
+import './components/navbar/Navbar.css'
 import { Button } from 'reactstrap'
-import SelectCharacter from './components/buttons/SelectCharacter'
-import Home from './routes/Home'
+//---------------------------------------
+//IMPORT BTNS
+import BP1 from './components/buttons/BP1'
+import BP2 from './components/buttons/BP2'
+//---------------------------------------
+//IMPORT LISTS
+import LP2 from './components/list/LP2'
+import LP1 from './components/list/LP1'
+//------------------------------------------
+import SelectBoard from './components/Boards/selectBoard'
+import {DragDropContext} from 'react-beautiful-dnd'
+
+
 
 
 function App() {
+
+
   return (
     <div className="App">
       <Navbar/>
@@ -16,34 +28,33 @@ function App() {
           <div className='select'>
             <hr />
             <h2>Choose the Character</h2>
-                    <SelectCharacter className='btnSelect' text='Select' content={<Home/>}/>
-                    <hr />
+            <BP1 className='btnSelect' text='Select'/>
+            <hr />
+              <LP1/>
+              
+              
                     
           </div>
         </div>
         
         <div className="center">
         <Button color='dark'className='btn_battle'>Start Battle</Button>
+        <hr />
         
-        <div id="tabuleiro">
-            <div className="casa" id="A1"> <img src=""/> </div>
-            <div className="casa" id="A2"> <img src=""/> </div>
-            <div className="casa" id="A3"> <img src=""/> </div>
-            <div className="casa" id="B1"> <img src=""/> </div>
-            <div className="casa" id="B2"> <img src=""/> </div>
-            <div className="casa" id="B3"> <img src=""/> </div>
-            <div className="casa" id="C1"> <img src=""/> </div>
-            <div className="casa" id="C2"> <img src=""/> </div>
-            <div className="casa" id="C3"> <img src=""/> </div>
-        </div>
+        <SelectBoard/>
+        
+
         </div>
        
         <div className="rigth">
         <div className='select'>
           <hr />
             <h2>Choose the Character</h2>
-                     <SelectCharacter className='btnSelect' text='Select' content={<Home/>}/>
-                    <hr />
+            <BP2 className='btnSelect' text='Select'/>
+            <hr />
+
+              <LP2/>
+            
           </div>
         </div>
       </div>

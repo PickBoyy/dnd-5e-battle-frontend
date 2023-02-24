@@ -1,7 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from 'reactstrap'
-import Create from './modal'
+import BtnNav from "../buttons/BtnNav" 
 
 function Navbar() {
   return (
@@ -9,7 +6,7 @@ function Navbar() {
         <h2>D&D 5e Battle</h2>
         <ul>
             <li>
-               <Create className={"create_character"}/>
+              <BtnNav/>
             </li>
         </ul>
     </nav>

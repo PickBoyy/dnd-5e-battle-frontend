@@ -1,0 +1,110 @@
+.BoardX6{
+    background-image: url(../../../images/cenario.jfif);
+    border: 3px solid #0d0f13;
+    border-radius: 3px;
+    width: 1000px;
+    height: 900px;
+    margin: auto;
+    display: grid;
+    padding: 15px;
+    gap: 5px;
+    margin-top: 50px;
+    grid-template-areas:
+    'A1 A2 A3 A4 A5 A6'
+    'B1 B2 B3 B4 B5 B6'
+    'C1 C2 C3 C4 C5 C6'
+    ;
+}
+
+.casaX6{
+    background-color: rgba(204, 204, 204, 0.525);
+    border-radius: 3px;
+    border: 2px solid #CCC;
+}
+
+#A1 {
+    grid-area: "A1";
+    text-align: center;
+}
+
+#A2 {
+    grid-area: "A2"; 
+    text-align: center;
+}
+
+#A3 {
+    grid-area: "A3";
+    text-align: center;
+}
+#A4 {
+    grid-area: "A1";
+    text-align: center;
+}
+
+#A5 {
+    grid-area: "A2"; 
+    text-align: center;
+}
+
+#A6 {
+    grid-area: "A3";
+    text-align: center;
+}
+
+#B1 {
+    grid-area: "B1";
+    text-align: center;
+}
+
+#B2 {
+    grid-area: "B2";
+    text-align: center;
+}
+
+#B3 {
+    grid-area: "B3";
+    text-align: center;
+}
+#B4 {
+    grid-area: "B1";
+    text-align: center;
+}
+
+#B5 {
+    grid-area: "B2";
+    text-align: center;
+}
+
+#B6 {
+    grid-area: "B3";
+    text-align: center;
+}
+
+#C1 {
+    grid-area: "C1";
+    text-align: center;
+}
+
+#C2 {
+    grid-area: "C2";
+    text-align: center;
+}
+
+#C3 {
+    grid-area: "C3";
+    text-align: center;
+}
+#C4 {
+    grid-area: "C1";
+    text-align: center;
+}
+
+#C5 {
+    grid-area: "C2";
+    text-align: center;
+}
+
+#C6 {
+    grid-area: "C3";
+    text-align: center;
+}
