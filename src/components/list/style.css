@@ -1,0 +1,11 @@
+.placeCharacters {
+    background-color: rgba(128, 128, 128, 0.04);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.placeCharacters:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.493);
+    font-size: 20;
+}

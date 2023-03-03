@@ -108,3 +108,6 @@
     grid-area: "C3";
     text-align: center;
 }
+.textBoard {
+    padding: 0px;
+}

@@ -23,3 +23,18 @@ a:hover {
 p{
     color: white;
 }
+.infoText2 {
+    position: absolute;
+    padding: 10px;
+    margin-left: 30px;
+    margin-top: 100px;
+    font-family: "Pirata One",Arial, Helvetica, sans-serif;
+}
+.infoText1 {
+    position: absolute;
+    padding: 10px;
+    margin-left: 30px;
+    margin-top: 100px;
+    font-family: "Pirata One",Arial, Helvetica, sans-serif;
+  
+}
