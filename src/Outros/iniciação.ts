@@ -1,5 +1,5 @@
 import {D4,D8,D10,D20 } from '../scripts/dados'
-import {IPersonagem} from './ModelsTs/ModeloDePersonagem'
+import {IPersonagem} from '../ModelsTs/ModeloDePersonagem'
 
 
 export function iniciativa (Personagem1:IPersonagem , Personagem2:IPersonagem) {

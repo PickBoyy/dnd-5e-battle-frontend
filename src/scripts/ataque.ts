@@ -1,7 +1,7 @@
 import {D4,D8,D10,D20 } from './dados'
-import {IArma} from '../Outros/ModelsTs/ModelosDeArmas'
-import {IPersonagem} from '../Outros/ModelsTs/ModeloDePersonagem'
-import { IMonstro } from '../Outros/ModelsTs/ModeloDeMonstros'
+import {IArma} from '../ModelsTs/ModelosDeArmas'
+import {IPersonagem} from '../ModelsTs/ModeloDePersonagem'
+import { IMonstro } from '../ModelsTs/ModeloDeMonstros'
 
 export function Ataque(Atacante:IPersonagem|IMonstro, Alvo:IMonstro|IPersonagem):void {
 

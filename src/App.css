@@ -4,12 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Pirata+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /*--------------------------------------------------------------------------------------------------------------------------*/
+.App {
+    height: 100%;
+}
 /*=====================================================Grid============================================================*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 850px;
+    height: 100vh;
+
 }
 .left {
     background-color: #181d27;

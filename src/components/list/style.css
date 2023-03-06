@@ -1,11 +1,33 @@
 .placeCharacters {
-    background-color: rgba(128, 128, 128, 0.04);
-    margin-bottom: 10px;
+    background-color: rgba(128, 128, 128, 0.268);
     padding: 10px;
     border: 1px solid black;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-family: 'Pirata one',Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: whitesmoke;
 }
 .placeCharacters:hover {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.493);
     font-size: 20;
+}
+.placeSelected {
+    background-color: rgba(91, 81, 81, 0.334);
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    
+    
+}
+.titleSelected {
+    padding: 7px;
+    font-size: 20px;
+    font-family: 'Pirata one',Arial, Helvetica, sans-serif;
+    
 }

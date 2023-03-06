@@ -7,7 +7,7 @@
     margin: auto;
     display: grid;
     padding: 15px;
-    gap: 5px;
+    gap: 2px;
     margin-top: 50px;
     grid-template-areas:
     'A1 A2 A3 A4 A5 A6 A7 A8 A9'
@@ -20,6 +20,9 @@
     background-color: rgba(204, 204, 204, 0.525);
     border-radius: 3px;
     border: 2px solid #CCC;
+    padding: 0px;
+    position: relative;
+    
 }
 
 #A1 {
@@ -109,5 +112,9 @@
     text-align: center;
 }
 .textBoard {
-    padding: 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Pirata one';
 }

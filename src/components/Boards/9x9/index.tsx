@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useAppContext } from "../../../hooks/context";
-import ICharacter from "../../../models/ICharacter";
 import './style.css'
 
 const BoardX9: React.FC = () => {
@@ -21,7 +20,7 @@ const BoardX9: React.FC = () => {
       <div className="BoardX9">
         {buttonValues.map((buttonValue, i) => (
           <button onClick={() => handleBoardClick(i)} key={i} className='casaX9' id={`casaX9 ${i}`}>
-            {buttonValue}
+            <p className="textBoard">{buttonValue}</p>
           </button>
         ))}
       </div>

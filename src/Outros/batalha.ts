@@ -1,5 +1,5 @@
 import { iniciativa } from './iniciação'
-import {IPersonagem, Personagem} from './ModelsTs/ModeloDePersonagem'
+import {IPersonagem, Personagem} from '../ModelsTs/ModeloDePersonagem'
 import {Ataque} from '../scripts/ataque'
 import { iniciativa3 } from './iniciativa2'
 
@@ -39,10 +39,4 @@ while(vencedor.PontosDeVida > 0 || perdedor.PontosDeVida > 0 ) {
         
     }
    
-}
-
-export function batalha2(...Personagem:IPersonagem[]) {
-
-    
-
 }

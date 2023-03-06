@@ -1,37 +1,46 @@
-import React, { useState,useEffect, useContext } from "react";
-import ICharacter from "../../models/ICharacter";
+import React, { useState, useEffect, useContext } from "react";
 import { AppContext, useAppContext } from "../../hooks/context";
-import './style.css'
+import "./style.css";
+import { IMonstro } from "../../ModelsTs/ModeloDeMonstros";
 
+const inicialState: Array<IMonstro> = [];
 
-const inicialState:Array<ICharacter> = []
+function LP2() {
+  const {
+    player2,
+    setRenderCharacter,
+    setInfoText2,
+    chosenMonsters,
+    setChosenMonsters
+  } = useAppContext();
 
- function LP2()  {
-  const {player2,setChosenCharacter2,setRenderCharacter,setInfoText2,chosenCharacter2} = useAppContext()
-  const[L2characters,setL2characters] = useState<Array<ICharacter>>(inicialState)    //LISTA 2
+  const [LMonster, setLMonster] = useState<Array<IMonstro>>(inicialState); //LISTA 2
 
-  useEffect(()=> {
-    setL2characters(player2)
-    console.log(L2characters)
-  },[player2]) 
+  useEffect(() => {
+    setLMonster(player2);
+    console.log(LMonster);
+  }, [player2]);
 
-  function handlerBord(character:ICharacter) {
-    setChosenCharacter2(character)
-    setRenderCharacter(character.nome)
-    setInfoText2('escolha a posição do personagem')
-    setChosenCharacter2(chosenCharacter2 + character)
+  function handlerBord(monster: IMonstro) {
+    setChosenMonsters(monster);
+    setRenderCharacter(monster.nome);
+    setInfoText2("Escolha a posição do monstro!");
+    setChosenMonsters([...chosenMonsters, monster]);
   }
-  
 
-return (
-  <div>
-    {L2characters?.map((character:ICharacter)=> (
-      <div className="placeCharacters" onClick={() => handlerBord(character)  }>
-        {character.nome}
+  return (
+    <div>
+      <div className="placeSelected">
+        <p className="titleSelected">Selected Monsters</p>
+
+        {LMonster?.map((monster: IMonstro) => (
+          <div className="placeCharacters" onClick={() => handlerBord(monster)}>
+            {monster.nome}
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-)
+    </div>
+  );
 }
 
-export default LP2
+export default LP2;

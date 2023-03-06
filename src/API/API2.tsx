@@ -1,32 +1,29 @@
 import React, {useState, Fragment} from 'react'
-import ICharacter from '../models/ICharacter'
+import { IMonstro } from '../ModelsTs/ModeloDeMonstros'
 import { DropdownItem } from 'reactstrap'
-import repoCharacter from '../RepoCharacter/Character'
 import {useAppContext} from './../hooks/context'
+import { Monsters } from '../Repository/RepoMonster'
 
 
 const P2 = () => {
 
   const {player2,setPlayer2} = useAppContext()
 
-  const handleAddCharacter = (character:ICharacter) => {
-    setPlayer2([...player2, character])
+  const handleAddCharacter = (monster:IMonstro) => {
+    setPlayer2([...player2, monster])
   }
 
-  
-
   return (
-    
-    <Fragment>
-      {repoCharacter.map((character) => (
-        <Fragment>
+    <>
+      {Monsters.map((monster) => (
+        <>
           <DropdownItem>
-            <option onClick={()=> handleAddCharacter(character)}  value={character.nome}>{character.nome}</option>
+            <option onClick={()=> handleAddCharacter(monster)}  value={monster.nome}>{monster.nome}</option>
           </DropdownItem>
-        </Fragment>
+        </>
       ))
       }
-    </Fragment>
+    </>
   )
 
 }

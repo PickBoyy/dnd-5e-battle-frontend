@@ -9,7 +9,7 @@ import { AppWrapper } from './hooks/context'
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <AppWrapper>
-    <App />
+    <App/>
     </AppWrapper>
   </React.StrictMode>,
 )

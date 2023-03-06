@@ -1,6 +1,6 @@
 import { D20 } from './dados';
-import {IPersonagem, Personagem} from '../Outros/ModelsTs/ModeloDePersonagem'
-import { IMonstro,Monstro } from '../Outros/ModelsTs/ModeloDeMonstros';
+import {IPersonagem, Personagem} from '../ModelsTs/ModeloDePersonagem'
+import { IMonstro,Monstro } from '../ModelsTs/ModeloDeMonstros';
 import {Ataque} from  './ataque'
 //----------------------------------------------------------------
 export interface IParticipante_iniciativa{
