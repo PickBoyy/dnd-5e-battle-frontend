@@ -12,11 +12,31 @@ import LP2 from "./components/list/LP2";
 import LP1 from "./components/list/LP1";
 //------------------------------------------
 import SelectBoard from "./components/Boards/selectBoard";
-import { useAppContext } from "./hooks/context";
+import { AppContext, useAppContext } from "./hooks/context";
 import { Turno } from "./scripts/Turno";
+import { IPersonagem } from "./ModelsTs/ModeloDePersonagem";
+import { IMonstro } from "./ModelsTs/ModeloDeMonstros";
+import { useContext } from "react";
+import { PlaceBatle } from "./components/PlaceBatle";
+import { PlaceD20 } from "./components/D20";
 
+type typeContext = {
+  infoText1:string,
+  infoText2:string,
+  chosenCharacters:Array<IPersonagem|IMonstro>,
+  chosenMonsters:Array<IMonstro|IPersonagem>
+}
 function App() {
-  const { infoText1, infoText2, chosenCharacters,chosenMonsters } = useAppContext();
+  const { infoText1, infoText2, chosenCharacters,chosenMonsters } = useContext<typeContext>(AppContext);
+
+  const handlerBatle = (lutadores: Array<IPersonagem | IMonstro>) => {
+    const personagens = lutadores.filter(lutador => lutador.tipo === 'personagem') as IPersonagem[];
+    const monstros = lutadores.filter(lutador => lutador.tipo === 'monstro') as IMonstro[];
+    Turno([...personagens, ...monstros]);
+  }
+  
+  
+  
 
   return (
     <div className="App">
@@ -30,11 +50,13 @@ function App() {
             <BP1 className="btnSelect" text="Select" />
             <hr />
             <LP1 />
+            <PlaceBatle/>
+            <PlaceD20/>
           </div>
         </div>
 
         <div className="center">
-          <Button onClick={() => Turno(chosenCharacters,chosenMonsters)} color="dark" className="btn_battle">
+          <Button onClick={() => handlerBatle(chosenCharacters,chosenMonsters)} color="dark" className="btn_battle">
             Start Battle
           </Button>
           <hr />

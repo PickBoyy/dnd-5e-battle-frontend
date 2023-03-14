@@ -1,15 +1,15 @@
 //                                                 IMPORT'S!
 //=====================================================================================================//
 import { D20 } from './dados';
-import {IPersonagem, Personagem} from '../ModelsTs/ModeloDePersonagem'
-import { IMonstro,Monstro } from '../ModelsTs/ModeloDeMonstros';
+import {IPersonagem} from '../ModelsTs/ModeloDePersonagem'
+import { IMonstro} from '../ModelsTs/ModeloDeMonstros';
 import {Ataque} from  './ataque'
 import { OrdemDeAtaque, Participante_iniciativa } from './TesteIniciativa';
 //=====================================================================================================//
 //////////////////////////////////////////////FUNÇÃO DE DUELO!/////////////////////////////////////////
 //=====================================================================================================//
 
-export function Turno(...Lutadores:IPersonagem[]|IMonstro[]) {
+export function Turno(...Lutadores:Array<IPersonagem>|Array<IMonstro>) {
     var Ordem = OrdemDeAtaque(...Lutadores)
     var OrdemDeHerois = Ordem.filter(Participante=> Participante.tipo === "Personagem")
     var OrdemDeMonstros = Ordem.filter(Participante=> Participante.tipo === "Monstro")      

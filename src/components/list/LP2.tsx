@@ -26,6 +26,7 @@ function LP2() {
     setRenderCharacter(monster.nome);
     setInfoText2("Escolha a posição do monstro!");
     setChosenMonsters([...chosenMonsters, monster]);
+    console.log(chosenMonsters)
   }
 
   return (
@@ -34,7 +35,7 @@ function LP2() {
         <p className="titleSelected">Selected Monsters</p>
 
         {LMonster?.map((monster: IMonstro) => (
-          <div className="placeCharacters" onClick={() => handlerBord(monster)}>
+          <div className="placeCharacters" onClick={() => handlerBord(monster)} key={monster.nome}>
             {monster.nome}
           </div>
         ))}

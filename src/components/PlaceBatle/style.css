@@ -1,0 +1,24 @@
+.allBatle {
+    margin-top: 40px;
+}
+.titleBatle {
+    font-size: 35px;
+    font-family: 'Pirata One';
+}
+.textBatle {
+    background-color: rgba(128, 128, 128, 0.848);
+    height: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    
+}
+.pBatle {
+    font-size: 20px;
+    font-family: 'Pirata One';
+    
+}
